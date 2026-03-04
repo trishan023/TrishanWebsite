@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Colour tokens ── */
+:root {
+  --cream:      250 248 245;  /* #FAF8F5 */
+  --surface:    #F0EBE3;
+  --text-brown: #2C2018;
+  --muted:      #8C7B6E;
+  --accent:     194 122 90;   /* #C27A5A */
+  --footer-bg:  #2C2018;
+}
+
+:root.dark {
+  --cream:      28 23 18;     /* #1C1712 — slightly richer dark */
+  --surface:    #3D3028;      /* lifted warm card surface for contrast */
+  --text-brown: #F5EFE8;      /* slightly brighter */
+  --muted:      #B8A090;      /* lighter for legibility */
+  --accent:     212 138 106;  /* #D48A6A */
+  --footer-bg:  #110E0A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  body {
+    @apply bg-cream text-text-brown font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+  }
+
+  footer {
+    scroll-snap-align: start;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--cream));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--accent));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--accent) / 0.8);
+  }
+}
+
+/* Blob animation */
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%;
+    transform: scale(1.05) rotate(5deg);
+  }
+  50% {
+    border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%;
+    transform: scale(0.97) rotate(-3deg);
+  }
+  75% {
+    border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%;
+    transform: scale(1.03) rotate(2deg);
+  }
+}
+
+.blob-animate {
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+.blob-animate-slow {
+  animation: blob-morph 12s ease-in-out infinite reverse;
+}
+
+/* Frosted glass effect */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

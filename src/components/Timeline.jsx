@@ -21,7 +21,7 @@ function extractYearRange(period) {
 /* ── Card ── */
 function WorkCard({ entry }) {
   return (
-    <div className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors">
+    <motion.div whileHover={{ scale: 1.015, transition: { duration: 0.25 } }} className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300">
       <div className="mb-3">
         <h3 className="font-display font-bold text-xl text-text-brown leading-snug">{entry.role}</h3>
         {entry.detail && <p className="text-sm text-muted italic mt-0.5">{entry.detail}</p>}
@@ -59,7 +59,7 @@ function WorkCard({ entry }) {
           <span key={tag} className="text-xs font-medium bg-cream text-muted px-2.5 py-1 rounded-full">{tag}</span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

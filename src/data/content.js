@@ -17,23 +17,23 @@ export const personal = {
 export const skills = [
   {
     category: "Data Engineering",
-    tags: ["dbt", "Apache Spark", "Airflow", "Kafka", "ELT/ETL", "Data Vault 2.0", "Medallion Architecture", "Data Lineage"],
+    tags: ["dbt", "Apache Spark", "Airflow", "ELT/ETL", "Medallion Architecture"],
   },
   {
     category: "Cloud & Infrastructure",
-    tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks", "Terraform", "Docker"],
+    tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks", "Docker"],
   },
   {
     category: "Analytics & BI",
-    tags: ["Power BI", "Tableau", "Looker", "SQL", "DAX", "Semantic Layer", "Revenue Analytics"],
+    tags: ["Power BI", "Tableau", "Looker", "SQL", "DAX"],
   },
   {
     category: "AI & Machine Learning",
-    tags: ["GenAI", "LLM Integration", "RAG", "Prompt Engineering", "NLP", "fast.ai", "PyTorch", "Hugging Face"],
+    tags: ["GenAI", "RAG", "Prompt Engineering", "NLP", "fast.ai", "PyTorch", "Hugging Face"],
   },
   {
     category: "Languages & Tools",
-    tags: ["Python", "SQL", "Scala", "PySpark", "Git", "CI/CD", "REST APIs", "Jupyter"],
+    tags: ["Python", "PySpark", "SQL", "Git", "CI/CD", "Jupyter"],
   },
   {
     category: "Leadership & Delivery",
@@ -90,15 +90,15 @@ export const timeline = [
     company: "University of Mumbai",
     companyUrl: "https://mu.ac.in/",
     role: "Assistant Lecturer",
-    period: "2014 – 2016",
+    period: "2015 – 2016",
     location: "Mumbai, India",
     type: "Academic",
     highlights: [
-      "Taught undergraduate courses in database management, algorithms, and programming.",
-      "Developed curriculum materials and assessed student performance across multiple cohorts.",
-      "Mentored final-year students on data-centric capstone projects.",
+      "Taught undergraduate mechanical engineering courses including Heat & Mass Transfer, Mechanical Design, and Theory of Machines.",
+      "Developed lecture materials, assessments, and lab exercises across multiple cohorts.",
+      "Mentored final-year students on engineering capstone projects.",
     ],
-    tags: ["Teaching", "SQL", "Algorithms", "Database Management"],
+    tags: ["Teaching", "Heat & Mass Transfer", "Mechanical Design", "Theory of Machines"],
     interlude: { label: "Undergraduate Studies", period: "2010 – 2014" },
   },
 ];
@@ -111,13 +111,14 @@ export const projects = [
     subtitle: "GenAI ESG Compliance Platform",
     company: "Deloitte",
     role: "Senior Developer",
+    trademarkNote: "SustainNext™ is a trademark of Deloitte.",
     description:
-      "Designed and built a production-grade GenAI pipeline enabling enterprises to assess ESG regulatory compliance gaps at scale. Leveraged Retrieval-Augmented Generation (RAG) with LLM semantic analysis to surface compliance risks across unstructured regulatory documents, replacing weeks of manual review with near-real-time insight.",
+      "Built the core GenAI pipeline for Deloitte's ESG compliance product — automating regulatory gap analysis across unstructured documents using RAG and LLM semantic analysis.",
     highlights: [
-      "RAG pipeline over regulatory corpora with LLM-powered semantic analysis",
-      "Prompt engineering for structured compliance gap extraction",
-      "Automated compliance scoring mapped to ESG reporting frameworks (GRI, SASB, TCFD)",
-      "Reduced manual compliance review time by ~80%",
+      "~80% reduction in manual compliance review time",
+      "RAG pipeline over regulatory corpora with LLM semantic gap analysis",
+      "Compliance scoring mapped to GRI, SASB, and TCFD frameworks",
+      "Prompt-engineered extraction templates for structured ESG output",
     ],
     tags: ["GenAI", "RAG", "LLM", "Python", "Prompt Engineering", "ESG"],
     accent: "#C27A5A",
@@ -125,18 +126,18 @@ export const projects = [
   {
     id: 2,
     title: "Gen-I",
-    subtitle: "NLP Complaint Classifier",
+    subtitle: "Text (Complaints) Classification",
     company: "Deloitte",
     role: "Lead Developer",
     description:
-      "Led development of an NLP-powered complaint classification system for a major financial institution. Trained a fast.ai supervised deep learning model on historical complaint data, mapping outputs to the AFCA taxonomy for automated routing and regulatory reporting.",
+      "Built an NLP text classification system for a major financial institution to automatically categorise customer complaints for regulatory routing and reporting.",
     highlights: [
-      "Supervised deep learning model using fast.ai / PyTorch ULMFiT",
-      "Multi-class classification across AFCA complaint taxonomy",
-      "High precision/recall with minimal labelled training data via transfer learning",
+      "Multi-class classification across the full AFCA complaint taxonomy",
+      "fast.ai / PyTorch ULMFiT with transfer learning on limited labelled data",
+      "High precision/recall — minimal annotation required",
       "Automated downstream routing and regulatory report generation",
     ],
-    tags: ["NLP", "fast.ai", "PyTorch", "Deep Learning", "Python", "AFCA"],
+    tags: ["NLP", "Text Classification", "fast.ai", "PyTorch", "Python", "AFCA"],
     accent: "#8C7B6E",
   },
   {
@@ -146,14 +147,14 @@ export const projects = [
     company: "Pacific National",
     role: "Analytics Engineer – Function Lead",
     description:
-      "Architected and delivered an end-to-end analytics platform to detect and quantify revenue leakage across the Order-to-Cash cycle. Integrated data from freight management, billing, and contracts systems into a unified dbt + Snowflake model, enabling commercial teams to act on previously invisible gaps.",
+      "Architected an analytics platform to detect and quantify revenue leakage across Order-to-Cash — unifying billing, freight, and contract data to surface previously invisible gaps.",
     highlights: [
-      "End-to-end O2C data model in dbt (Data Vault 2.0 + mart layer)",
+      "Significant recurring revenue leakage identified and attributed",
+      "End-to-end O2C data model in dbt + Snowflake",
       "Automated anomaly detection for billing discrepancies and undercharges",
-      "Executive Power BI dashboards with drill-through to transaction-level detail",
-      "Identified and attributed significant recurring revenue leakage",
+      "Executive Power BI dashboards with drill-through to transaction level",
     ],
-    tags: ["dbt", "Snowflake", "Power BI", "Python", "Azure", "Revenue Analytics"],
+    tags: ["dbt", "Snowflake", "Power BI", "Python", "Azure"],
     accent: "#C27A5A",
   },
   {
@@ -163,12 +164,12 @@ export const projects = [
     company: "Commonwealth Bank of Australia",
     role: "Senior Delivery Consultant (via Deloitte)",
     description:
-      "Embedded as a senior delivery consultant within CBA's large-scale customer remediation program. Established QA frameworks, end-to-end data lineage tracking, and cross-functional governance processes to ensure regulatory compliance and audit readiness for affected customer populations.",
+      "Embedded within CBA's large-scale customer remediation program, establishing QA and data lineage frameworks under tight regulatory deadlines.",
     highlights: [
-      "Designed and implemented data quality and QA testing frameworks",
-      "Built automated data lineage and traceability for regulatory audit trails",
-      "Led cross-functional workstreams across engineering, compliance, and legal teams",
-      "Delivered remediation milestones on time under regulatory deadline pressure",
+      "Full audit traceability across affected customer populations",
+      "QA and data quality testing frameworks built from the ground up",
+      "End-to-end data lineage for regulatory audit trails",
+      "Cross-functional delivery across engineering, compliance, and legal",
     ],
     tags: ["Data Lineage", "QA Frameworks", "Regulatory Compliance", "SQL", "Agile"],
     accent: "#8C7B6E",
@@ -194,15 +195,14 @@ export const education = [
     degree: "Bachelor of Engineering (Mechanical Engineering)",
     institution: "University of Mumbai",
     institutionUrl: "https://mu.ac.in/",
-    period: "2011 – 2015",
+    period: "2010 – 2014",
     location: "Mumbai, India",
     detail: "First Class Honours",
     highlights: [
       "First Class Honours.",
-      "Core study in computer systems, algorithms, database engineering, and software development.",
-      "Final year capstone project in data-driven system design.",
+      "Core study in thermodynamics, fluid mechanics, mechanical design, and theory and system of machines.",
     ],
-    tags: ["Mechanical Engineering", "Algorithms", "Database Systems", "Software Engineering"],
+    tags: ["Mechanical Engineering", "Thermodynamics", "Fluid Mechanics", "Mechanical Design"],
   },
 ];
 
@@ -220,13 +220,17 @@ export const leadership = [
   {
     title: "Assistant Lecturer",
     org: "University of Mumbai",
-    description: "Taught database systems and algorithms; developed curriculum and guided capstone projects.",
+    description: "Taught Heat & Mass Transfer, Mechanical Design, and Theory of Machines; developed curriculum and guided capstone projects.",
+  },
+  {
+    title: "Professional Mentor",
+    org: "UTS Professional Mentoring Programme",
+    description: "Mentored UTS students on career development, industry transitions, and professional growth in engineering and data.",
   },
 ];
 
 export const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },

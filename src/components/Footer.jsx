@@ -1,12 +1,22 @@
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { personal, navLinks } from '../data/content';
 import CopyEmailButton from './CopyEmailButton';
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
 
   return (
     <footer className="bg-footer-bg text-cream py-12">
-      <div className="max-w-6xl mx-auto px-6">
+      <motion.div
+        ref={ref}
+        className="max-w-6xl mx-auto px-6"
+        initial={{ opacity: 0, y: 24 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-8">
           <div>
             <span className="font-display font-bold text-2xl">TT</span>
@@ -45,7 +55,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

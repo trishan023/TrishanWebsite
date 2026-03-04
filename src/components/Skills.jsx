@@ -27,7 +27,8 @@ function SkillCard({ category, tags, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors"
+      whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
+      className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
     >
       <h3 className="font-semibold text-text-brown mb-4">{category}</h3>
       <motion.div
@@ -40,7 +41,7 @@ function SkillCard({ category, tags, index }) {
           <motion.span
             key={tag}
             variants={tagVariant}
-            className="text-xs font-medium bg-cream text-muted border border-surface px-3 py-1.5 rounded-full hover:border-accent/40 hover:text-accent transition-colors cursor-default"
+            className="text-xs font-medium bg-cream text-muted border border-surface px-3 py-1.5 rounded-full hover:border-accent/30 hover:text-accent transition-colors duration-300 cursor-default"
           >
             {tag}
           </motion.span>

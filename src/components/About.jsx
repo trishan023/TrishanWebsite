@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { personal } from '../data/content';
+import { personal, skills } from '../data/content';
 import CopyEmailButton from './CopyEmailButton';
 
 const fadeUp = {
@@ -27,6 +27,7 @@ export default function About() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
+          {/* Full-width header */}
           <motion.p variants={fadeUp} className="text-accent font-semibold text-sm tracking-widest uppercase mb-3">
             About
           </motion.p>
@@ -34,12 +35,15 @@ export default function About() {
             Building the data layer<br className="hidden sm:block" /> that powers decisions.
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Bio */}
-            <motion.div variants={fadeUp}>
+          {/* Two-column body — both columns start at the same level */}
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+
+            {/* Left: Bio + links */}
+            <motion.div variants={fadeUp} className="md:col-span-2">
               <p className="text-text-brown text-lg leading-relaxed">
                 {personal.bio}
               </p>
+
               <div className="mt-8 flex gap-4">
                 <a
                   href={personal.linkedin}
@@ -64,20 +68,57 @@ export default function About() {
                   className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline cursor-pointer"
                 />
               </div>
+
+              {/* Company names */}
+              <div className="mt-10 pt-8 border-t border-surface">
+                <p className="text-xs text-muted tracking-widest uppercase mb-4">Experience at</p>
+                <div className="flex flex-col gap-2">
+                  {[
+                    { name: 'Pacific National', href: 'https://www.pacificnational.com.au/' },
+                    { name: 'Deloitte', href: 'https://www.deloitte.com/au/' },
+                    { name: 'Commonwealth Bank of Australia', href: 'https://www.commbank.com.au/' },
+                  ].map(co => (
+                    <a
+                      key={co.name}
+                      href={co.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted hover:text-accent transition-colors duration-200"
+                    >
+                      {co.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div variants={stagger} className="grid grid-cols-2 gap-6">
-              {personal.stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  variants={fadeUp}
-                  className="bg-surface rounded-2xl p-6 border border-surface hover:border-accent/30 transition-colors"
-                >
-                  <div className="font-display font-bold text-5xl text-accent">{stat.value}</div>
-                  <div className="mt-2 text-sm text-muted font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
+            {/* Right: Toolkit */}
+            <motion.div variants={fadeUp} className="md:col-span-3">
+              <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">Toolkit</p>
+              <div className="space-y-3">
+                {skills.map((skill, i) => (
+                  <motion.div
+                    key={skill.category}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                    whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
+                    className="bg-surface rounded-xl p-4 border border-transparent hover:border-accent/20 transition-colors duration-300"
+                  >
+                    <p className="text-xs font-semibold text-text-brown mb-2">{skill.category}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {skill.tags.map(tag => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-cream text-muted border border-surface px-2.5 py-1 rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </motion.div>

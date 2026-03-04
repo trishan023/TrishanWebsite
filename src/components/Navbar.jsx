@@ -54,6 +54,9 @@ export default function Navbar() {
   return (
     <motion.nav
       className="fixed top-0 left-0 right-0 z-50 glass"
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       style={{}}
     >
       <motion.div

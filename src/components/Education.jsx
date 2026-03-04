@@ -43,7 +43,8 @@ export default function Education() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={cardsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors"
+                  whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
+                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
                 >
                   <p className="font-semibold text-text-brown">{ed.degree}</p>
                   {ed.institutionUrl ? (
@@ -102,7 +103,8 @@ export default function Education() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={cardsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.15 + i * 0.1 }}
-                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors"
+                  whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
+                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
                 >
                   <p className="font-semibold text-text-brown">{item.title}</p>
                   <p className="text-accent text-sm font-medium mt-0.5">{item.org}</p>

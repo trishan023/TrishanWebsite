@@ -15,11 +15,11 @@
 }
 
 :root.dark {
-  --cream:      28 23 18;     /* #1C1712 — slightly richer dark */
-  --surface:    #3D3028;      /* lifted warm card surface for contrast */
-  --text-brown: #F5EFE8;      /* slightly brighter */
-  --muted:      #B8A090;      /* lighter for legibility */
-  --accent:     212 138 106;  /* #D48A6A */
+  --cream:      31 25 18;     /* #1F1912 — warm dark, lifted from near-black */
+  --surface:    #2E2419;      /* section alt — clearly lighter than bg */
+  --text-brown: #F3EDE4;      /* crisp warm off-white */
+  --muted:      #B0988A;      /* warm, readable mid-tone */
+  --accent:     228 152 116;  /* #E49874 — more vibrant, pops on dark */
   --footer-bg:  #110E0A;
 }
 
@@ -44,6 +44,7 @@
 
   section {
     scroll-snap-align: start;
+    scroll-margin-top: 64px;
     min-height: 100vh;
   }
 
@@ -97,9 +98,15 @@
   animation: blob-morph 12s ease-in-out infinite reverse;
 }
 
-/* Pipeline background opacity — higher in light mode, subtle in dark */
+/* Pipeline background opacity */
 .pipeline-bg { opacity: 0.14; }
-:root.dark .pipeline-bg { opacity: 0.07; }
+:root.dark .pipeline-bg { opacity: 0.11; }
+
+/* Dark mode card elevation — lifts cards off same-bg sections via shadow */
+:root.dark .group.rounded-2xl,
+:root.dark .group.rounded-xl {
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.35), 0 0 0 1px rgb(255 255 255 / 0.06);
+}
 
 /* Frosted glass effect */
 .glass {

@@ -46,18 +46,18 @@ export const timeline = [
     id: 1,
     company: "Pacific National",
     companyUrl: "https://www.pacificnational.com.au/",
-    role: "Analytics Engineer – Function Lead",
+    role: "Analytics Engineer",
     period: "Jun 2023 – Present",
     location: "Sydney, AU",
     type: "Full-time",
     highlights: [
-      "Lead the analytics engineering function, owning the modern data stack strategy across dbt, Snowflake, and Power BI.",
+      "Lead the analytics engineering function, owning the modern data stack strategy across dbt, Databricks, and Power BI.",
       "Architected and delivered a Revenue Leakage Detection platform for Order-to-Cash analytics, surfacing previously invisible revenue gaps.",
       "Drove BI modernisation by migrating legacy reporting to a governed semantic layer, improving data reliability and self-service adoption.",
       "Established pipeline architecture standards, coding conventions, and peer-review processes for the team.",
       "Partner directly with commercial, operations, and finance stakeholders to translate business requirements into data products.",
     ],
-    tags: ["dbt", "Snowflake", "Power BI", "Python", "Azure", "Medallion Architecture"],
+    tags: ["dbt", "Databricks", "Power BI", "Python", "Azure", "Medallion Architecture"],
   },
   {
     id: 2,
@@ -70,7 +70,7 @@ export const timeline = [
     highlights: [
       "Delivered enterprise data engineering and analytics engagements across financial services, energy, and public sector clients.",
       "Led development of the SustainNext™ GenAI ESG Compliance Platform — a production RAG pipeline using LLMs for semantic compliance gap analysis.",
-      "Built Gen-I, an NLP complaint classifier using fast.ai supervised deep learning, mapped to AFCA taxonomy with high precision/recall.",
+      "Built Gen-1, an NLP complaint classifier using fast.ai supervised deep learning, mapped to AFCA taxonomy with high precision/recall.",
       "Served as Senior Delivery Consultant at CBA, establishing QA and data lineage frameworks for a large-scale regulatory remediation program.",
       "Provided technical advisory on data platform architecture, cloud migration, and analytics strategy for multiple enterprise clients.",
     ],
@@ -125,7 +125,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Gen-I",
+    title: "Gen-1",
     subtitle: "Text (Complaints) Classification",
     company: "Deloitte",
     role: "Lead Developer",
@@ -145,16 +145,16 @@ export const projects = [
     title: "Revenue Leakage Detection",
     subtitle: "Order-to-Cash Analytics Platform",
     company: "Pacific National",
-    role: "Analytics Engineer – Function Lead",
+    role: "Analytics Engineer",
     description:
       "Architected an analytics platform to detect and quantify revenue leakage across Order-to-Cash — unifying billing, freight, and contract data to surface previously invisible gaps.",
     highlights: [
       "Significant recurring revenue leakage identified and attributed",
-      "End-to-end O2C data model in dbt + Snowflake",
+      "End-to-end O2C data model in dbt + Databricks",
       "Automated anomaly detection for billing discrepancies and undercharges",
       "Executive Power BI dashboards with drill-through to transaction level",
     ],
-    tags: ["dbt", "Snowflake", "Power BI", "Python", "Azure"],
+    tags: ["dbt", "Databricks", "Power BI", "Python", "Azure"],
     accent: "#C27A5A",
   },
   {
@@ -208,7 +208,7 @@ export const education = [
 
 export const leadership = [
   {
-    title: "Analytics Engineering Function Lead",
+    title: "Analytics Engineering Lead",
     org: "Pacific National",
     description: "Leading the analytics engineering practice — team standards, hiring, mentoring, and technical strategy.",
   },

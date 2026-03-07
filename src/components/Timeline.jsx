@@ -67,11 +67,11 @@ function WorkCard({ entry }) {
 function InterludeBadge({ label, period }) {
   return (
     <div className="hidden md:flex justify-center -mt-4 mb-14 relative z-10">
-      <div className="bg-cream border border-accent/25 rounded-full px-5 py-2 flex items-center gap-2.5 shadow-sm">
+      <a href="#education" className="bg-cream border border-accent/25 rounded-full px-5 py-2 flex items-center gap-2.5 shadow-sm hover:border-accent/60 hover:shadow-md transition-all duration-200">
         <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
         <span className="text-xs font-semibold text-accent tracking-wide">{label}</span>
         <span className="text-xs text-muted">· {period}</span>
-      </div>
+      </a>
     </div>
   );
 }
@@ -208,10 +208,10 @@ export default function Timeline() {
             <Fragment key={entry.id}>
               <MobileRow entry={entry} />
               {entry.interlude && (
-                <div className="pl-8 -mt-6 mb-8 flex items-center gap-1.5">
+                <a href="#education" className="pl-8 -mt-6 mb-8 flex items-center gap-1.5 hover:opacity-80 transition-opacity">
                   <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
                   <span className="text-xs text-muted italic">{entry.interlude.label} · {entry.interlude.period}</span>
-                </div>
+                </a>
               )}
             </Fragment>
           ))}

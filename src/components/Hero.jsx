@@ -155,10 +155,10 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="#experience"
+              href="#projects"
               className="inline-flex items-center gap-2 border-2 border-text-brown text-text-brown font-semibold px-8 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all duration-200"
             >
-              Selected Work
+              View Work
             </a>
           </motion.div>
         </motion.div>

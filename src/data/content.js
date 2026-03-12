@@ -124,7 +124,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Gen-I",
+    title: "Automated Complaints Classifier",
     subtitle: "NLP Assurance Tool",
     company: "Deloitte",
     role: "Developer",

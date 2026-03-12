@@ -140,35 +140,38 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <motion.div
-        className="md:hidden overflow-hidden bg-cream border-t border-surface"
-        initial={false}
-        animate={{ height: menuOpen ? 'auto' : 0 }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
-      >
-        <ul className="px-6 py-4 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <li key={link.href}>
+      {menuOpen && (
+        <motion.div
+          className="md:hidden bg-cream border-t border-surface"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+        >
+          <ul className="px-6 py-4 flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={handleNavClick}
+                  className="text-base font-medium text-text-brown hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
               <a
-                href={link.href}
+                href="#contact"
                 onClick={handleNavClick}
-                className="text-base font-medium text-text-brown hover:text-accent transition-colors"
+                className="inline-block text-sm font-semibold bg-accent text-cream px-5 py-2 rounded-full"
               >
-                {link.label}
+                Get in touch
               </a>
             </li>
-          ))}
-          <li>
-            <a
-              href="#contact"
-              onClick={handleNavClick}
-              className="inline-block text-sm font-semibold bg-accent text-cream px-5 py-2 rounded-full"
-            >
-              Get in touch
-            </a>
-          </li>
-        </ul>
-      </motion.div>
+          </ul>
+        </motion.div>
+      )}
     </motion.nav>
   );
 }

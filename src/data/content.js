@@ -63,7 +63,7 @@ export const timeline = [
     id: 2,
     company: "Deloitte",
     companyUrl: "https://www.deloitte.com/au/",
-    role: "Graduate → Senior Data Analyst, Data Engineering & Analytics",
+    role: "Graduate → Senior Data Analyst",
     period: "Mar 2018 – Jun 2023",
     location: "Sydney, AU",
     type: "Consulting",
@@ -78,7 +78,7 @@ export const timeline = [
     interlude: { label: "Postgraduate Studies", period: "2016 – 2017" },
     subRoles: [
       {
-        role: "Senior Delivery Consultant",
+        role: "Senior Consultant",
         client: "Commonwealth Bank of Australia (CBA)",
         period: "May 2021 – Nov 2021",
         description: "QA/lineage frameworks, regulatory compliance delivery, cross-functional leadership for large-scale remediation program.",
@@ -124,8 +124,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Gen-1",
-    subtitle: "Text (Complaints) Classification",
+    title: "Gen-I",
+    subtitle: "NLP Complaint Classifier",
     company: "Deloitte",
     role: "Developer",
     description:
@@ -160,7 +160,7 @@ export const projects = [
     title: "CBA Remediation Program",
     subtitle: "Regulatory Compliance Delivery",
     company: "Commonwealth Bank of Australia",
-    role: "Senior Delivery Consultant (via Deloitte)",
+    role: "Senior Consultant (via Deloitte)",
     description:
       "Embedded within CBA's large-scale customer remediation program, establishing QA and data lineage frameworks under tight regulatory deadlines.",
     highlights: [

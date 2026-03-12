@@ -16,15 +16,11 @@ export const personal = {
 
 export const skills = [
   {
-    category: "Data Engineering",
-    tags: ["dbt", "Apache Spark", "Airflow", "ELT/ETL", "Medallion Architecture"],
+    category: "Leadership & Delivery",
+    tags: ["Team Leadership", "Agile / Scrum", "Client Advisory", "QA Frameworks", "Stakeholder Management", "Technical Mentoring"],
   },
   {
-    category: "Cloud & Infrastructure",
-    tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks", "Docker"],
-  },
-  {
-    category: "Analytics & BI",
+    category: "Analytics & Visualisation",
     tags: ["Power BI", "Tableau", "Looker", "SQL", "DAX"],
   },
   {
@@ -36,8 +32,12 @@ export const skills = [
     tags: ["Python", "PySpark", "SQL", "Git", "CI/CD", "Jupyter"],
   },
   {
-    category: "Leadership & Delivery",
-    tags: ["Team Leadership", "Agile / Scrum", "Client Advisory", "QA Frameworks", "Stakeholder Management", "Technical Mentoring"],
+    category: "Data Engineering",
+    tags: ["dbt", "Apache Spark", "Airflow", "ELT/ETL", "Medallion Architecture"],
+  },
+  {
+    category: "Cloud & Platform",
+    tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks", "Docker"],
   },
 ];
 
@@ -63,19 +63,19 @@ export const timeline = [
     id: 2,
     company: "Deloitte",
     companyUrl: "https://www.deloitte.com/au/",
-    role: "Senior Consultant, Data Engineering & Analytics",
+    role: "Data Analyst → Senior Consultant, Data Engineering & Analytics",
     period: "Mar 2018 – Jun 2023",
     location: "Sydney, AU",
     type: "Consulting",
     highlights: [
       "Delivered enterprise data engineering and analytics engagements across financial services, energy, and public sector clients.",
-      "Led development of the SustainNext™ GenAI ESG Compliance Platform — a production RAG pipeline using LLMs for semantic compliance gap analysis.",
-      "Built Gen-1, an NLP complaint classifier using fast.ai supervised deep learning, mapped to AFCA taxonomy with high precision/recall.",
+      "Senior developer of SustainNext™, Deloitte's global flagship ESG compliance product powered by Generative AI.",
+      "Developed Gen-I NLP model using fast.ai to classify customer complaints under the AFCA framework, enhancing remediation efficiency.",
       "Served as Senior Delivery Consultant at CBA, establishing QA and data lineage frameworks for a large-scale regulatory remediation program.",
       "Provided technical advisory on data platform architecture, cloud migration, and analytics strategy for multiple enterprise clients.",
     ],
-    tags: ["GenAI", "RAG", "NLP", "fast.ai", "AWS", "Azure", "Snowflake", "dbt"],
-    interlude: { label: "Postgraduate Studies", period: "2016 – 2018" },
+    tags: ["GenAI", "NLP", "fast.ai", "AWS", "Azure", "Snowflake", "dbt"],
+    interlude: { label: "Postgraduate Studies", period: "2016 – 2017" },
     subRoles: [
       {
         role: "Senior Delivery Consultant",
@@ -94,11 +94,11 @@ export const timeline = [
     location: "Mumbai, India",
     type: "Academic",
     highlights: [
-      "Taught undergraduate mechanical engineering courses including Heat & Mass Transfer, Mechanical Design, and Theory of Machines.",
+      "Taught undergraduate mechanical engineering courses including Engineering Design, AutoCAD, and Heat Transfer.",
       "Developed lecture materials, assessments, and lab exercises across multiple cohorts.",
       "Mentored final-year students on engineering capstone projects.",
     ],
-    tags: ["Teaching", "Heat & Mass Transfer", "Mechanical Design", "Theory of Machines"],
+    tags: ["Teaching", "Engineering Design", "AutoCAD", "Heat Transfer"],
     interlude: { label: "Undergraduate Studies", period: "2010 – 2014" },
   },
 ];
@@ -113,14 +113,13 @@ export const projects = [
     role: "Senior Developer",
     trademarkNote: "SustainNext™ is a trademark of Deloitte.",
     description:
-      "Built the core GenAI pipeline for Deloitte's ESG compliance product — automating regulatory gap analysis across unstructured documents using RAG and LLM semantic analysis.",
+      "Senior developer on Deloitte's global flagship ESG compliance product, helping automate regulatory gap analysis across unstructured documents using Generative AI.",
     highlights: [
-      "~80% reduction in manual compliance review time",
-      "RAG pipeline over regulatory corpora with LLM semantic gap analysis",
-      "Compliance scoring mapped to GRI, SASB, and TCFD frameworks",
-      "Prompt-engineered extraction templates for structured ESG output",
+      "Contributed to GenAI-powered automation of ESG compliance analysis",
+      "Supported regulatory gap analysis across unstructured corporate documents",
+      "Aligned technical roadmap to business strategy for global product rollout",
     ],
-    tags: ["GenAI", "RAG", "LLM", "Python", "Prompt Engineering", "ESG"],
+    tags: ["GenAI", "Python", "ESG"],
     accent: "#C27A5A",
   },
   {
@@ -128,14 +127,13 @@ export const projects = [
     title: "Gen-1",
     subtitle: "Text (Complaints) Classification",
     company: "Deloitte",
-    role: "Lead Developer",
+    role: "Developer",
     description:
-      "Built an NLP text classification system for a major financial institution to automatically categorise customer complaints for regulatory routing and reporting.",
+      "Developed an NLP text classification model for a major financial institution to automatically categorise customer complaints under the AFCA framework, enhancing remediation efficiency.",
     highlights: [
-      "Multi-class classification across the full AFCA complaint taxonomy",
-      "fast.ai / PyTorch ULMFiT with transfer learning on limited labelled data",
-      "High precision/recall — minimal annotation required",
-      "Automated downstream routing and regulatory report generation",
+      "Multi-class classification across the AFCA complaint taxonomy",
+      "Built using fast.ai for supervised deep learning",
+      "Enhanced remediation efficiency for complaint handling",
     ],
     tags: ["NLP", "Text Classification", "fast.ai", "PyTorch", "Python", "AFCA"],
     accent: "#8C7B6E",
@@ -151,7 +149,7 @@ export const projects = [
     highlights: [
       "Significant recurring revenue leakage identified and attributed",
       "End-to-end O2C data model in dbt + Databricks",
-      "Automated anomaly detection for billing discrepancies and undercharges",
+      "Analysis of billing discrepancies and undercharges across freight contracts",
       "Executive Power BI dashboards with drill-through to transaction level",
     ],
     tags: ["dbt", "Databricks", "Power BI", "Python", "Azure"],
@@ -181,15 +179,14 @@ export const education = [
     degree: "Master of Engineering and Engineering Management",
     institution: "University of Technology Sydney",
     institutionUrl: "https://www.uts.edu.au/",
-    period: "2016 – 2018",
+    period: "2016 – 2017",
     location: "Sydney, AU",
-    detail: "Major — Mechanical Design",
+    detail: "Mechanical Engineering and Business Operations",
     highlights: [
-      "Majored in Mechanical Design within a dual-discipline engineering and management programme.",
+      "Completed with Distinction.",
       "Developed cross-functional skills bridging technical engineering practice with organisational leadership and project delivery.",
-      "Graduated in 2018, the same year as joining Deloitte — combining postgraduate study with the start of a professional consulting career.",
     ],
-    tags: ["Engineering Management", "Mechanical Design", "Systems Thinking", "Project Management"],
+    tags: ["Engineering Management", "Mechanical Engineering", "Business Operations", "Project Management"],
   },
   {
     degree: "Bachelor of Engineering (Mechanical Engineering)",
@@ -197,9 +194,7 @@ export const education = [
     institutionUrl: "https://mu.ac.in/",
     period: "2010 – 2014",
     location: "Mumbai, India",
-    detail: "First Class Honours",
     highlights: [
-      "First Class Honours.",
       "Core study in thermodynamics, fluid mechanics, mechanical design, and theory and system of machines.",
     ],
     tags: ["Mechanical Engineering", "Thermodynamics", "Fluid Mechanics", "Mechanical Design"],
@@ -220,7 +215,7 @@ export const leadership = [
   {
     title: "Assistant Lecturer",
     org: "University of Mumbai",
-    description: "Taught Heat & Mass Transfer, Mechanical Design, and Theory of Machines; developed curriculum and guided capstone projects.",
+    description: "Taught Engineering Design, AutoCAD, and Heat Transfer; developed curriculum and guided capstone projects.",
   },
   {
     title: "Professional Mentor",

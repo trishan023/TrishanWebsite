@@ -34,9 +34,9 @@ export default function Education() {
 
         <div ref={cardsRef} className="grid md:grid-cols-2 gap-8">
           {/* Education */}
-          <div>
+          <div className="flex flex-col">
             <h3 className="font-semibold text-text-brown mb-4 text-sm tracking-widest uppercase text-muted">Degrees</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 flex-1">
               {education.map((ed, i) => (
                 <motion.div
                   key={i}
@@ -90,27 +90,39 @@ export default function Education() {
                 </motion.div>
               ))}
             </div>
-
           </div>
 
           {/* Leadership */}
-          <div>
+          <div className="flex flex-col">
             <h3 className="font-semibold text-text-brown mb-4 text-sm tracking-widest uppercase text-muted">Leadership & Mentoring</h3>
-            <div className="space-y-4">
-              {leadership.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={cardsInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.15 + i * 0.1 }}
-                  whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
-                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
-                >
-                  <p className="font-semibold text-text-brown">{item.title}</p>
-                  <p className="text-accent text-sm font-medium mt-0.5">{item.org}</p>
-                  <p className="text-sm text-muted mt-2 leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10">
+              {leadership.map((item, i) => {
+                const icons = [
+                  /* Analytics Engineering Lead */
+                  <svg key="i" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>,
+                  /* Graduate Program Mentor */
+                  <svg key="i" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+                  /* Assistant Lecturer */
+                  <svg key="i" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>,
+                  /* Professional Mentor */
+                  <svg key="i" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>,
+                ];
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={cardsInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+                  >
+                    <div className="w-14 h-14 rounded-xl bg-surface flex items-center justify-center text-accent mb-3">
+                      {icons[i]}
+                    </div>
+                    <p className="font-display font-bold text-text-brown text-base leading-snug">{item.title}</p>
+                    <p className="text-accent text-sm font-semibold mt-1">{item.org}</p>
+                    <p className="text-sm text-muted mt-2 leading-relaxed">{item.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>

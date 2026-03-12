@@ -63,7 +63,7 @@ export const timeline = [
     id: 2,
     company: "Deloitte",
     companyUrl: "https://www.deloitte.com/au/",
-    role: "Data Analyst → Senior Consultant, Data Engineering & Analytics",
+    role: "Graduate → Senior Data Analyst, Data Engineering & Analytics",
     period: "Mar 2018 – Jun 2023",
     location: "Sydney, AU",
     type: "Consulting",

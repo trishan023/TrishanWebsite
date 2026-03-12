@@ -158,7 +158,7 @@ export default function Hero() {
               href="#experience"
               className="inline-flex items-center gap-2 border-2 border-text-brown text-text-brown font-semibold px-8 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all duration-200"
             >
-              View Work
+              Selected Work
             </a>
           </motion.div>
         </motion.div>

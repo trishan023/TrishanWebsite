@@ -15,8 +15,8 @@ function Toast({ visible }) {
             transition={{ duration: 0.22, ease: 'easeOut' }}
             className="flex items-center gap-2.5 bg-text-brown text-cream text-sm font-medium px-5 py-3 rounded-full shadow-xl"
           >
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.5l3.5 3.5 6.5-7" stroke="#C27A5A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-accent">
+              <path d="M2.5 7.5l3.5 3.5 6.5-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             Email copied to clipboard
           </motion.div>

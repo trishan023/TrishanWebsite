@@ -40,21 +40,21 @@
 
 /* ── Colour tokens ── */
 :root {
-  --cream:      250 248 245;  /* #FAF8F5 */
-  --surface:    #F0EBE3;
-  --text-brown: #2C2018;
-  --muted:      #8C7B6E;
-  --accent:     194 122 90;   /* #C27A5A */
-  --footer-bg:  #2C2018;
+  --cream:      250 249 247;  /* #FAF9F7 */
+  --surface:    #F3F1ED;
+  --text-brown: #1A1612;
+  --muted:      #7C7168;
+  --accent:     180 89 48;    /* #B45930 — deep copper */
+  --footer-bg:  #1A1612;
 }
 
 :root.dark {
-  --cream:      31 25 18;     /* #1F1912 — warm dark, lifted from near-black */
-  --surface:    #2E2419;      /* section alt — clearly lighter than bg */
-  --text-brown: #F3EDE4;      /* crisp warm off-white */
-  --muted:      #B0988A;      /* warm, readable mid-tone */
-  --accent:     228 152 116;  /* #E49874 — more vibrant, pops on dark */
-  --footer-bg:  #110E0A;
+  --cream:      23 19 17;     /* #171311 — warm near-black */
+  --surface:    #231E1A;      /* warm charcoal */
+  --text-brown: #EDE8E2;      /* warm off-white */
+  --muted:      #A69A8E;      /* warm stone */
+  --accent:     212 132 90;   /* #D4845A — bright copper */
+  --footer-bg:  #0D0B09;
 }
 
 @layer base {

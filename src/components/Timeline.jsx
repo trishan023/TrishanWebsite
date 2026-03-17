@@ -208,10 +208,13 @@ export default function Timeline() {
             <Fragment key={entry.id}>
               <MobileRow entry={entry} />
               {entry.interlude && (
-                <a href="#education" className="pl-8 -mt-6 mb-8 flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-                  <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
-                  <span className="text-xs text-muted italic">{entry.interlude.label} · {entry.interlude.period}</span>
-                </a>
+                <div className="pl-6 sm:pl-8 mt-2 mb-8">
+                  <a href="#education" className="inline-flex items-center gap-2 bg-cream border border-accent/25 rounded-full px-4 py-1.5 shadow-sm hover:border-accent/60 hover:shadow-md transition-all duration-200">
+                    <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-accent tracking-wide">{entry.interlude.label}</span>
+                    <span className="text-xs text-muted">· {entry.interlude.period}</span>
+                  </a>
+                </div>
               )}
             </Fragment>
           ))}

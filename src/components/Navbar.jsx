@@ -139,6 +139,18 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Backdrop overlay */}
+      {menuOpen && (
+        <motion.div
+          className="md:hidden fixed inset-0 top-0 z-[-1] backdrop-blur-sm bg-text-brown/10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
       {/* Mobile menu */}
       {menuOpen && (
         <motion.div

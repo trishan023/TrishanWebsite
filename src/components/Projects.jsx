@@ -85,7 +85,7 @@ export default function Projects() {
           </motion.h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}

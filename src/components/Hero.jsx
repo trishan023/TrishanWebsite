@@ -115,7 +115,7 @@ export default function Hero() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="font-display font-bold text-6xl sm:text-7xl lg:text-8xl text-text-brown leading-tight"
+              className="font-display font-bold text-4xl sm:text-6xl lg:text-8xl text-text-brown leading-tight"
             >
               {nameParts.map((word, i) => (
                 <motion.span
@@ -131,7 +131,7 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-4 text-xl sm:text-2xl text-muted font-light max-w-2xl"
+            className="mt-4 text-lg sm:text-2xl text-muted font-light max-w-2xl"
           >
             {personal.title}
           </motion.p>

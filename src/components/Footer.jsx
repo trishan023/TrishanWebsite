@@ -17,7 +17,7 @@ export default function Footer() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
             <span className="font-display font-bold text-2xl">TT</span>
             <p className="text-sm text-[#FAF9F7]/50 mt-1">{personal.title}</p>

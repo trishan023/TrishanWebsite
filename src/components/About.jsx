@@ -36,11 +36,11 @@ export default function About() {
           </motion.h2>
 
           {/* Two-column body — both columns start at the same level */}
-          <div className="grid md:grid-cols-5 gap-12 items-start">
+          <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
 
             {/* Left: Bio + links */}
             <motion.div variants={fadeUp} className="md:col-span-2">
-              <p className="text-text-brown text-lg leading-relaxed">
+              <p className="text-text-brown text-base sm:text-lg leading-relaxed">
                 {personal.bio}
               </p>
 

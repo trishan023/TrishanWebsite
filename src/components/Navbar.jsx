@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { navLinks, personal } from '../data/content';
 
@@ -139,16 +140,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Backdrop overlay */}
-      {menuOpen && (
+      {/* Backdrop overlay — portalled to body so it escapes nav's stacking context */}
+      {menuOpen && createPortal(
         <motion.div
-          className="md:hidden fixed inset-0 top-0 z-[-1] backdrop-blur-sm bg-text-brown/10"
+          className="md:hidden fixed inset-0 z-40 backdrop-blur-sm bg-text-brown/10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           onClick={() => setMenuOpen(false)}
-        />
+        />,
+        document.body
       )}
 
       {/* Mobile menu */}

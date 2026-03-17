@@ -153,10 +153,10 @@ export default function Navbar() {
         document.body
       )}
 
-      {/* Mobile menu */}
-      {menuOpen && (
+      {/* Mobile menu — portalled to body at z-[45], above the z-40 backdrop */}
+      {menuOpen && createPortal(
         <motion.div
-          className="md:hidden bg-cream border-t border-surface"
+          className="md:hidden fixed top-[65px] left-0 right-0 z-[45] bg-cream border-t border-surface"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -184,7 +184,8 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-        </motion.div>
+        </motion.div>,
+        document.body
       )}
     </motion.nav>
   );

@@ -72,20 +72,21 @@ export default function About() {
               {/* Company names */}
               <div className="mt-10 pt-8 border-t border-surface">
                 <p className="text-xs text-muted tracking-widest uppercase mb-4">Experience at</p>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-4">
                   {[
-                    { name: 'Pacific National', href: 'https://www.pacificnational.com.au/' },
-                    { name: 'Deloitte', href: 'https://www.deloitte.com/au/' },
-                    { name: 'Commonwealth Bank of Australia', href: 'https://www.commbank.com.au/' },
+                    { name: 'Pacific National',               industry: 'Freight & Logistics',   href: 'https://www.pacificnational.com.au/' },
+                    { name: 'Deloitte',                       industry: 'Management Consulting', href: 'https://www.deloitte.com/au/' },
+                    { name: 'Commonwealth Bank of Australia', industry: 'Banking & Finance',     href: 'https://www.commbank.com.au/' },
                   ].map(co => (
                     <a
                       key={co.name}
                       href={co.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-muted hover:text-accent transition-colors duration-200"
+                      className="group"
                     >
-                      {co.name}
+                      <span className="block text-sm font-medium text-text-brown group-hover:text-accent transition-colors duration-200">{co.name}</span>
+                      <span className="block text-xs text-muted mt-0.5">{co.industry}</span>
                     </a>
                   ))}
                 </div>
@@ -121,6 +122,7 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+
         </motion.div>
       </div>
     </section>

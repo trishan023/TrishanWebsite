@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { personal } from '../data/content';
 
 const containerVariants = {
@@ -86,6 +86,8 @@ function PipelineBg() {
 
 export default function Hero() {
   const nameParts = personal.name.split(' ');
+  const { scrollY } = useScroll();
+  const scrollIndicatorOpacity = useTransform(scrollY, [0, 120], [1, 0]);
 
   return (
     <section
@@ -113,7 +115,7 @@ export default function Hero() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="font-display font-bold text-6xl sm:text-7xl lg:text-8xl text-text-brown leading-tight"
+              className="font-display font-bold text-4xl sm:text-6xl lg:text-8xl text-text-brown leading-tight"
             >
               {nameParts.map((word, i) => (
                 <motion.span
@@ -129,7 +131,7 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-4 text-xl sm:text-2xl text-muted font-light max-w-2xl"
+            className="mt-4 text-lg sm:text-2xl text-muted font-light max-w-2xl"
           >
             {personal.title}
           </motion.p>
@@ -169,6 +171,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
+        style={{ opacity: scrollIndicatorOpacity }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
         <span className="text-xs text-muted tracking-widest uppercase">Scroll</span>

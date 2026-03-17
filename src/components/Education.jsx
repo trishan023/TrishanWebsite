@@ -32,7 +32,7 @@ export default function Education() {
           </motion.h2>
         </motion.div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-2 gap-6 md:gap-8">
           {/* Education */}
           <div className="flex flex-col">
             <h3 className="font-semibold text-text-brown mb-4 text-sm tracking-widest uppercase text-muted">Degrees</h3>
@@ -44,7 +44,7 @@ export default function Education() {
                   animate={cardsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   whileHover={{ scale: 1.015, transition: { duration: 0.25 } }}
-                  className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
+                  className="bg-surface rounded-2xl p-4 sm:p-6 border border-transparent hover:border-accent/20 transition-colors duration-300"
                 >
                   <p className="font-semibold text-text-brown">{ed.degree}</p>
                   {ed.institutionUrl ? (
@@ -55,19 +55,18 @@ export default function Education() {
                   ) : (
                     <p className="text-accent text-sm font-medium mt-0.5">{ed.institution}</p>
                   )}
-                  <div className="flex gap-3 mt-2">
-                    <span className="text-xs text-muted">{ed.period}</span>
-                    {ed.location && (
-                      <>
-                        <span className="text-muted text-xs">·</span>
-                        <span className="text-xs text-muted">{ed.location}</span>
-                      </>
-                    )}
+                  <div className="flex flex-col gap-0.5 mt-2">
+                    <div className="flex flex-wrap gap-x-2 gap-y-0.5 items-center">
+                      <span className="text-xs text-muted whitespace-nowrap">{ed.period}</span>
+                      {ed.location && (
+                        <>
+                          <span className="text-muted text-xs">·</span>
+                          <span className="text-xs text-muted whitespace-nowrap">{ed.location}</span>
+                        </>
+                      )}
+                    </div>
                     {ed.detail && (
-                      <>
-                        <span className="text-muted text-xs">·</span>
-                        <span className="text-xs text-muted">{ed.detail}</span>
-                      </>
+                      <span className="text-xs text-muted">{ed.detail}</span>
                     )}
                   </div>
                   {ed.highlights && (
@@ -95,7 +94,7 @@ export default function Education() {
           {/* Leadership */}
           <div className="flex flex-col">
             <h3 className="font-semibold text-text-brown mb-4 text-sm tracking-widest uppercase text-muted">Leadership & Mentoring</h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-y-10">
               {leadership.map((item, i) => {
                 const icons = [
                   /* Analytics Engineering Lead */

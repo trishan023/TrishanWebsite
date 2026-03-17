@@ -21,7 +21,7 @@ function extractYearRange(period) {
 /* ── Card ── */
 function WorkCard({ entry }) {
   return (
-    <motion.div whileHover={{ scale: 1.015, transition: { duration: 0.25 } }} className="bg-surface rounded-2xl p-6 border border-transparent hover:border-accent/20 transition-colors duration-300">
+    <motion.div whileHover={{ scale: 1.015, transition: { duration: 0.25 } }} className="bg-surface rounded-2xl p-4 sm:p-6 border border-transparent hover:border-accent/20 transition-colors duration-300">
       <div className="mb-3">
         <h3 className="font-display font-bold text-xl text-text-brown leading-snug">{entry.role}</h3>
         {entry.detail && <p className="text-sm text-muted italic mt-0.5">{entry.detail}</p>}
@@ -159,7 +159,7 @@ function MobileRow({ entry }) {
       initial={{ opacity: 0, x: -24 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className="md:hidden relative pl-8 pb-12 last:pb-0"
+      className="md:hidden relative pl-6 sm:pl-8 pb-10 sm:pb-12 last:pb-0"
     >
       <div className={dotClass} />
       <p className="text-xs font-semibold text-accent mb-2">{label} <span className="text-muted font-normal">· {durationLabel}</span></p>

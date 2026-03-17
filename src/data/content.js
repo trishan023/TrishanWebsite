@@ -5,7 +5,7 @@ export const personal = {
   location: "Sydney, Australia",
   email: "trishan.talukdar@gmail.com",
   linkedin: "https://www.linkedin.com/in/trishantalukdar/",
-  bio: "I'm a data engineering and analytics professional with over 7 years of experience building scalable data platforms, modern data stacks, and AI-powered analytics solutions across three major cloud providers. Based in Sydney, I blend technical depth with strategic thinking — whether architecting ELT pipelines, leading cross-functional delivery teams, or building GenAI applications that turn compliance burdens into business intelligence.",
+  bio: "I'm a data and analytics professional with 7+ years across consulting, professional services, and in-house engineering. I've led data and AI engagements at Deloitte across financial services, energy, fintech, mining and public sector clients and brought the same delivery mindset into industry as an analytics engineer. Based in Sydney, I combine consulting rigour with hands-on technical depth: designing data platforms, driving cross-functional programs, and building GenAI solutions that turn complex problems into measurable business outcomes.",
   stats: [
     { label: "Years Experience", value: "7+" },
     { label: "Cloud Platforms", value: "3" },
@@ -75,7 +75,6 @@ export const timeline = [
       "Managed and mentored teams of 5–7 junior consultants and offshore analysts, providing training, conducting performance reviews, and guiding career progression.",
     ],
     tags: ["Client Advisory", "Data Analytics", "Audit Analytics", "NLP", "GenAI", "Team Leadership"],
-    interlude: { label: "Postgraduate Studies", period: "2016 – 2017" },
     subRoles: [
       {
         role: "Senior Consultant",
@@ -87,6 +86,20 @@ export const timeline = [
   },
   {
     id: 3,
+    company: "Measuremen",
+    companyUrl: "https://measuremen.io/",
+    role: "Project Consultant",
+    period: "Sep 2017 – Feb 2018",
+    location: "Sydney, AU",
+    type: "Consulting",
+    highlights: [
+      "Worked with clients to help them measure the actual use and performance of workplaces with occupancy and utilisation studies to make better decisions for facilities management.",
+    ],
+    tags: ["Workplace Analytics", "Facilities Management", "Occupancy Studies", "Data Collection"],
+    interlude: { label: "Postgraduate Studies", period: "2016 – 2017" },
+  },
+  {
+    id: 4,
     company: "University of Mumbai",
     companyUrl: "https://mu.ac.in/",
     role: "Assistant Lecturer & Teaching Roles",
@@ -204,9 +217,9 @@ export const education = [
 
 export const leadership = [
   {
-    title: "Analytics Engineering Lead",
+    title: "Analytics Engineering Practice",
     org: "Pacific National",
-    description: "Leading the analytics engineering practice — team standards, hiring, mentoring, and technical strategy.",
+    description: "Introduced dbt into the analytics function and established coding standards, peer-review processes, and pipeline conventions adopted by the team.",
   },
   {
     title: "Graduate Program Mentor",

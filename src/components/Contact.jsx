@@ -27,8 +27,8 @@ export default function Contact() {
           <motion.h2 variants={fadeUp} className="font-display font-bold text-4xl sm:text-5xl text-text-brown mb-6">
             Let's connect.
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-lg text-muted mb-12 max-w-xl mx-auto leading-relaxed">
-            Whether it's a data engineering challenge, a platform architecture conversation, or just saying hello — reach out.
+          <motion.p variants={fadeUp} className="text-base sm:text-lg text-muted mb-10 sm:mb-12 max-w-xl mx-auto leading-relaxed">
+            Whether you want to talk data pipelines, swap travel tips, debate the best cycling routes in Sydney, or just geek out over the latest in tech — I'm always up for a good conversation.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">

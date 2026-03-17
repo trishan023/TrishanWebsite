@@ -19,8 +19,23 @@ export default {
     );
     newResponse.headers.set(
       "Content-Security-Policy",
-      "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'"
+      "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com"
     );
+
+    env.AE.writeDataPoint({
+      blobs: [
+        request.cf?.country ?? "XX",
+        request.cf?.city ?? "",
+        request.cf?.colo ?? "",
+        new URL(request.url).pathname,
+        request.headers.get("user-agent") ?? "",
+      ],
+      doubles: [
+        request.cf?.latitude ?? 0,
+        request.cf?.longitude ?? 0,
+      ],
+      indexes: [request.cf?.country ?? "XX"],
+    });
 
     return newResponse;
   },

@@ -55,19 +55,18 @@ export default function Education() {
                   ) : (
                     <p className="text-accent text-sm font-medium mt-0.5">{ed.institution}</p>
                   )}
-                  <div className="flex gap-3 mt-2">
-                    <span className="text-xs text-muted">{ed.period}</span>
-                    {ed.location && (
-                      <>
-                        <span className="text-muted text-xs">·</span>
-                        <span className="text-xs text-muted">{ed.location}</span>
-                      </>
-                    )}
+                  <div className="flex flex-col gap-0.5 mt-2">
+                    <div className="flex flex-wrap gap-x-2 gap-y-0.5 items-center">
+                      <span className="text-xs text-muted whitespace-nowrap">{ed.period}</span>
+                      {ed.location && (
+                        <>
+                          <span className="text-muted text-xs">·</span>
+                          <span className="text-xs text-muted whitespace-nowrap">{ed.location}</span>
+                        </>
+                      )}
+                    </div>
                     {ed.detail && (
-                      <>
-                        <span className="text-muted text-xs">·</span>
-                        <span className="text-xs text-muted">{ed.detail}</span>
-                      </>
+                      <span className="text-xs text-muted">{ed.detail}</span>
                     )}
                   </div>
                   {ed.highlights && (

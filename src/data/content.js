@@ -43,11 +43,24 @@ export const skills = [
 
 export const timeline = [
   {
+    id: 5,
+    company: "AirTrunk",
+    companyUrl: "https://airtrunk.com/",
+    role: "Senior Analytics Engineer",
+    period: "Mar 2026 – Present",
+    location: "Sydney, AU",
+    type: "Full-time",
+    highlights: [
+      "Working at the intersection of data, AI, and hyperscale digital infrastructure.",
+    ],
+    tags: [],
+  },
+  {
     id: 1,
     company: "Pacific National",
     companyUrl: "https://www.pacificnational.com.au/",
     role: "Analytics Engineer",
-    period: "Jun 2023 – Present",
+    period: "Jun 2023 – Feb 2026",
     location: "Sydney, AU",
     type: "Full-time",
     highlights: [

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { navLinks, personal } from '../data/content';
+import { navLinks } from '../data/content';
 
 function SunIcon() {
   return (
